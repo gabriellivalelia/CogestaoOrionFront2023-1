@@ -1,12 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import Title from './src/components/Title/'
+import Cadastro from './src/components/Cadastro/'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>That's all folks!</Text>
-      <StatusBar style="auto" />
+      <Title/>
+      <Cadastro/>
     </View>
   );
 }
