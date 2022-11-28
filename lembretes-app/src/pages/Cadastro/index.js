@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-import Form from '../Form/'
+import Form from '../../components/Form/'
 
 export default function Cadastro(){
     return(
