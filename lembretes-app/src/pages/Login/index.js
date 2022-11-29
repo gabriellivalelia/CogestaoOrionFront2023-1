@@ -1,24 +1,29 @@
 import React, { useState } from 'react'
 import { View, TextInput, Text, Button } from 'react-native'
+import Title from '../../components/Title/'
+import { FormContainer, Form, FormLabel, Input, ButtonEntrar } from "./Styles";
+
+
 
 export default function Login({ navigation }){
 
     const [email, setEmail] = useState(null)
 
     return(
-        <View>
-            <View>
-                <Text>E-MAIL</Text>
-                <TextInput
+        <FormContainer>
+            <Title/>
+            <Form>
+                <FormLabel>E-MAIL</FormLabel>
+                <Input
                 onChangeText={setEmail}
                 value={email}
                 placeholder="Digite seu endereço de e-mail"
                 />
-                <Button
+                <ButtonEntrar
                 title="Entrar"
                 onPress={ () => navigation.navigate('Home', {nome: 'Eduardo chato'})}
                 />
-            </View>
-        </View>
+            </Form>
+        </FormContainer>
     );
 }

@@ -1,5 +1,10 @@
-import React, { useState } from 'react'
-import { View, TextInput, Text, Button } from 'react-native'
+import React, { useState } from "react";
+import { View, TextInput, Text, Button } from "react-native";
+
+import Title from "../../components/Title/";
+import Login from "../Login/";
+
+import { FormContainer, Form, FormLabel, Input, ButtonCancelar, ButtonConfirmar } from "./Styles";
 
 export default function Cadastro({ navigation }){
 
@@ -7,28 +12,32 @@ export default function Cadastro({ navigation }){
     const [email, setEmail] = useState(null)
 
     return(
-        <View>
-            <View>
+        <FormContainer>
+            <Title/>
+            <Form>
 
-                <Text>Nome Completo</Text>
-                <TextInput
+                <FormLabel>Nome Completo</FormLabel>
+                <Input
                 onChangeText={setNome}
                 value={nome}
                 placeholder="Digite seu nome completo"
                 />
                 
-                <Text>E-MAIL</Text>
-                <TextInput
+                <FormLabel>E-MAIL</FormLabel>
+                <Input
                 onChangeText={setEmail}
                 value={email}
                 placeholder="Digite seu endereço de e-mail"
                 />
-                <Button title="Cancelar"/>
-                <Button
+
+                <ButtonCancelar
+                title="Cancelar"/>
+
+                <ButtonConfirmar
                 title="Confirmar"
-                onPress={ () => navigation.navigate('Login')}
+                onPress={ () => navigation.navigate(Login)}
                 />
-            </View>
-        </View>
+            </Form>
+        </FormContainer>
     );
 }

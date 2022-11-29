@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import Cadastro from './src/pages/Cadastro/'
 import Login from './src/pages/Login/'
@@ -20,7 +20,7 @@ export default function App() {
         name="Cadastro" 
         component={Cadastro} 
         options={{
-          title: 'Lembretes ORION',
+          title: 'Cadastro',
           headerTintColor: '#510F71'
         }}
         />
@@ -29,7 +29,7 @@ export default function App() {
         name="Login" 
         component={Login} 
         options={{
-          title: 'Lembretes ORION',
+          title: 'Login',
           headerTintColor: '#510F71'
         }}
         />
@@ -38,7 +38,7 @@ export default function App() {
         name="Home" 
         component={Home} 
         options={{
-          title: 'Olá Usuário',
+          title: 'Home',
           headerStyle: {
             backgroundColor: '#D4BEF1'
           },
