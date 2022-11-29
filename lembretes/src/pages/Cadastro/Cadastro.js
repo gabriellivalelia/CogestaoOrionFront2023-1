@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {View, Text} from "react-native";
 import { Form, FormContainer, FormLabel, Input, ButtonCancelar, ButtonConfirmar } from "./Styles";
 
-function Cadastro(){ 
+function Cadastro({ navigation }){ 
  
     const [nome, setNome] = useState(null) 
     const [email, setEmail] = useState(null) 
