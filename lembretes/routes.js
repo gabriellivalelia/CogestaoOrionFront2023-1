@@ -17,7 +17,7 @@ function Routes(){
             <Stack.Navigator initialRouteName='Cadastro'>
 
                 <Stack.Screen 
-                    name="Cadastro"
+                    name="Cadastro" 
                     component={Cadastro}
                     options={{
                         title: "Cadastro"
@@ -36,7 +36,10 @@ function Routes(){
                     name="Home"
                     component={Home}
                     options={{
-                        title: "Home"
+                        title: "Home",
+                        headerStyle:{
+                            backgroundColor: '#D4BEF1'
+                        }
                     }}
                 />
 
@@ -44,7 +47,10 @@ function Routes(){
                     name="CadastrarLembrete"
                     component={CadastrarLembrete}
                     options={{
-                        title: "Cadastrar Lembrete"
+                        title: "Cadastrar Lembrete",
+                        headerStyle:{
+                            backgroundColor: '#D4BEF1'
+                        }
                     }}
                 />
 
@@ -52,7 +58,10 @@ function Routes(){
                     name="EditarLembrete"
                     component={EditarLembrete}
                     options={{
-                        title: "Editar Lembrete"
+                        title: "Editar Lembrete",
+                        headerStyle:{
+                            backgroundColor: '#D4BEF1'
+                        }
                     }}
                 />
             </Stack.Navigator>

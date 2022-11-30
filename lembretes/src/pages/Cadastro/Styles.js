@@ -1,8 +1,13 @@
 import styled from "styled-components"; 
+
+export const LogoImage = styled.Image` 
+    width: 100px;
+    height: 100px; 
+`; 
  
 export const FormContainer = styled.View` 
     background-color: #FFFFFF; 
-    padding-top: 60px; 
+    padding-top: 20px; 
     width: 100%; 
     height: 100%; 
     align-items: center; 
@@ -10,8 +15,7 @@ export const FormContainer = styled.View`
  
 export const Form = styled.View` 
     width: 100%; 
-    height: auto; 
-    margin-top: 30px;  
+    height: auto;  
     padding: 30px; 
 `; 
  
@@ -19,15 +23,17 @@ export const FormLabel = styled.Text`
     color: #510F71; 
     font-size: 18px; 
     font-weight: bold; 
-    padding-left: 20px;     
+    padding-left: 13px;     
 `; 
  
 export const Input = styled.TextInput` 
     width: 90%; 
-    background-color: #F5F5F5; 
+    background-color: #FFFFFF; 
     height: 40px; 
-    margin: 12px; 
-    padding-left: 10px; 
+    margin-left: 12px; 
+    margin-right: 12px; 
+    margin-bottom: 5px;
+    border-bottom-width: 1px;
 `; 
 
 export const ButtonForm = styled.View` 
@@ -40,6 +46,7 @@ export const ButtonForm = styled.View`
     display: flex;
     flex-direction: row;
     align-itens: center;
+    justify-content: space-evenly;
 `; 
  
 export const ButtonCancelar = styled.Button` 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+
 import Title from "../../components/Title";
-import { Form, FormContainer, FormLabel, Input, ButtonForm, ButtonCancelar, ButtonConfirmar } from "./Styles";
+import { LogoImage, Form, FormContainer, FormLabel, Input, ButtonForm, ButtonCancelar, ButtonConfirmar } from "./Styles";
 
 function Cadastro({ navigation }) {
 
@@ -9,6 +10,7 @@ function Cadastro({ navigation }) {
 
     return (
         <FormContainer>
+            <LogoImage source={require("../../assets/logo.png")}/>
             <Title />
             <Form>
 
@@ -27,9 +29,13 @@ function Cadastro({ navigation }) {
                 />
 
                 <ButtonForm>
-                    <ButtonCancelar title="Cancelar" />
+                    <ButtonCancelar 
+                    title="Cancelar" 
+                    color="#D4BEF1"
+                    />
                     <ButtonConfirmar
                         title="Confirmar"
+                        color="#974CF6"
                         onPress={() => navigation.navigate('Login')}
                     />
                 </ButtonForm>

@@ -8,7 +8,7 @@ export const FormContainer = styled.View`
 `; 
 
 export const Form = styled.View` 
-    width: 100%; 
+    width: 90%; 
     height: auto; 
     margin-top: 5px;  
     padding: 2px; 
@@ -18,50 +18,63 @@ export const Form = styled.View`
 export const MainTitle = styled.Text` 
     color: #000000; 
     font-size: 25px;    
-    padding: 10px;
+    padding: 2px;
     text-align: center;
+    margin-top: 10px;
 `; 
 
 export const Subtitle = styled.Text` 
     color: #000000; 
     font-size: 18px;    
-    padding: 10px;
+    padding: 8px;
     text-align: center;
+    width: 90%
+    margin-bottom: 5px;
 `; 
 
 export const FormTasks = styled.View` 
     width: 100%; 
     height: auto; 
-    padding-left: 30px; 
-    padding-right: 30px; 
-    padding-bottom: 20px;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-bottom: 5px;
+    padding-top: 5px;
     text-align: center;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    background-color: #FAF6FF;
+    border-radius: 5px;
 `; 
 
 export const Task = styled.Text` 
     color: #000000; 
     font-size: 20px;    
-    padding: 10px;
+    padding: 2px;
     text-align: center;
+    width: 100%;
 `; 
 
 export const TaskDescription = styled.Text` 
     color: #000000; 
     font-size: 15px;    
-    padding: 10px;
     text-align: center;
+    width: 100%;
+    margin-bottom: 2px;
 `;
 
 export const ButtonForm = styled.View` 
     width: 100%; 
     height: auto; 
-    margin-top: 10px;  
-    margin-bottom: 10px;  
+    margin-top: 2px;  
+    margin-bottom: 2px;  
     padding: 5px; 
     background-color: #FFFFFF;
     display: flex;
     flex-direction: row;
     align-itens: center;
+    justify-content: space-evenly;
 `; 
 
 export const ButtonExcluir = styled.Button` 

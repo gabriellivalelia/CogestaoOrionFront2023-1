@@ -5,10 +5,10 @@ function Home({ route, navigation }) {
 
     return (
         <FormContainer>
-            <Form>
+
                 <MainTitle>Olá, {route.params?.nome}</MainTitle>
                 <Subtitle>Aqui estão seus lembretes registrados:</Subtitle>
-            </Form>
+
 
             <Form>
                 <FormTasks>
@@ -19,9 +19,11 @@ function Home({ route, navigation }) {
                 <ButtonForm>
                     <ButtonExcluir
                         title="Excluir"
+                        color="#D4BEF1"
                     />
                     <ButtonEditar
                         title="Editar"
+                        color="#974CF6"
                         onPress={() => navigation.navigate('EditarLembrete')}
                     />
                 </ButtonForm>
@@ -37,9 +39,11 @@ function Home({ route, navigation }) {
                 <ButtonForm>
                     <ButtonExcluir
                         title="Excluir"
+                        color="#D4BEF1"
                     />
                     <ButtonEditar
                         title="Editar"
+                        color="#974CF6"
                         onPress={() => navigation.navigate('EditarLembrete')}
                     />
                 </ButtonForm>
@@ -48,6 +52,7 @@ function Home({ route, navigation }) {
 
             <ButtonAdicionarLembrete
                 title="Adicionar Lembrete"
+                color="#974CF6"
                 onPress={() => navigation.navigate('CadastrarLembrete')}
             />
         </FormContainer>

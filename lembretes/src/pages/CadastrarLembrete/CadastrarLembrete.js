@@ -28,10 +28,12 @@ function CadastrarLembrete({ navigation }) {
             <ButtonForm>
                 <ButtonCancelar
                     title="Cancelar"
+                    color="#D4BEF1"
                     onPress={() => navigation.navigate('Home')}
                 />
                 <ButtonConfirmar
                     title="Confirmar"
+                    color="#974CF6"
                     onPress={() => navigation.navigate('Home')}
                 />
             </ButtonForm>
