@@ -1,9 +1,8 @@
-import styled from "styled-components";
+import styled from "styled-components"; 
  
 export const FormContainer = styled.View` 
-    flex: 1; 
     background-color: #FFFFFF; 
-    padding-top: 60%; 
+    padding-top: 60px; 
     width: 100%; 
     height: 100%; 
     align-items: center; 
@@ -12,32 +11,33 @@ export const FormContainer = styled.View`
 export const Form = styled.View` 
     width: 100%; 
     height: auto; 
-    margin-top: 30%;  
-    padding: 30%; 
+    margin-top: 30px;  
+    padding: 30px; 
 `; 
  
 export const FormLabel = styled.Text` 
     color: #510F71; 
+    font-size: 18px; 
     font-weight: bold; 
-    padding-left: 20%;     
+    padding-left: 20px;     
 `; 
  
 export const Input = styled.TextInput` 
     width: 90%; 
     background-color: #F5F5F5; 
-    height: 40%; 
-    margin: 12%; 
-    padding-left: 10%; 
+    height: 40px; 
+    margin: 12px; 
+    padding-left: 10px; 
 `; 
  
 export const ButtonEntrar = styled.Button` 
-    font-size: 15%; 
+    font-size: 15px; 
     align-items: center; 
     justify-content: center; 
     width: 90%; 
-    background-color: #974CF6; 
-    padding-top: 14%; 
-    padding-bottom: 14%; 
-    margin: 12%; 
-    margin-top: 30%; 
-`; 
+    background-color: #D4BEF1; 
+    padding-top: 14px; 
+    padding-bottom: 14px; 
+    margin: 12px; 
+    marginTop: 30px; 
+`;

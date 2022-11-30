@@ -1,6 +1,5 @@
 import React, { useState } from 'react' 
-import { View, TextInput, Text, Button } from 'react-native' 
-//import Title from '../../components/Title/' 
+import Title from '../../components/Title';
 import { FormContainer, Form, FormLabel, Input, ButtonEntrar } from "./Styles"; 
  
  
@@ -11,6 +10,7 @@ function Login({ navigation }){
  
     return( 
         <FormContainer> 
+            <Title/>
             <Form> 
                 <FormLabel>E-MAIL</FormLabel> 
                 <Input 

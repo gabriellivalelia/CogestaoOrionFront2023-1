@@ -2,31 +2,41 @@ import styled from "styled-components";
  
 export const FormContainer = styled.View` 
     background-color: #FFFFFF; 
-    padding-top: 60px; 
+    padding-top: 30px; 
     width: 100%; 
     height: 100%; 
     align-items: center; 
+`; 
+
+export const PageTitle = styled.Text` 
+    color: #000000; 
+    font-size: 25px; 
+    align-text:center;   
+    padding: 10px; 
 `; 
  
 export const Form = styled.View` 
     width: 100%; 
     height: auto; 
     margin-top: 30px;  
-    padding: 30px; 
+    margin-bottom: 30px;  
+    padding: 40px; 
+    background-color: #F5F5F5;
 `; 
  
-export const FormLabel = styled.Text` 
-    color: #510F71; 
-    font-size: 18px; 
-    font-weight: bold; 
-    padding-left: 20px;     
-`; 
- 
-export const Input = styled.TextInput` 
+export const InputTitulo = styled.TextInput` 
     width: 90%; 
-    background-color: #F5F5F5; 
-    height: 40px; 
-    margin: 12px; 
+    height: 40px;
+    background-color: #FFFFFF; 
+    margin: 8px;
+    padding-left: 10px; 
+`; 
+
+export const InputDescricao = styled.TextInput` 
+    width: 90%; 
+    height: 100px;
+    background-color: #FFFFFF; 
+    margin: 8px;
     padding-left: 10px; 
 `; 
 
