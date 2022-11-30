@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text, Image,StyleSheet,Dimensions,TextInput } from "react-native";
+import { View,Text, Image,StyleSheet,Dimensions,TextInput,TouchableOpacity } from "react-native";
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -14,6 +14,9 @@ export default function Login(){
             <Text style={styles.title}>LembraRápido</Text>
             <TextInput style={styles.inputs} value={number} placeholder="NOME COMPLETO" keyboardType="default"/>
             <TextInput style={styles.inputs} value={number} placeholder="EMAIL" keyboardType="email-address"/>
+            <TouchableOpacity style={styles.botaoCadastro} onPress={() => navigation.navigate('Cadastro')}>
+                <Text style={styles.botaotexto}>CADASTRO</Text>    
+            </TouchableOpacity>
         </View>
     );
 }
@@ -39,6 +42,19 @@ const styles = StyleSheet.create({
         margin: 12,
         borderWidth: 1,
         padding: 10,
+    },
+    botaoCadastro: {
+        alignSelf: "center",
+        backgroundColor: "#DDDDDD",
+        padding: 10,
+        paddingVertical:15,
+        elevation: 5,
+        borderRadius: 100,
+        top: 40,
+        width: width*0.5
+      },
+    botaotexto:{
+        alignSelf: 'center'
     }
     
     
