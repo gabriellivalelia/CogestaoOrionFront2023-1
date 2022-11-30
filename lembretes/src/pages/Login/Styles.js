@@ -23,7 +23,7 @@ export const FormLabel = styled.Text`
     color: #510F71; 
     font-size: 18px; 
     font-weight: bold;   
-    padding-left: 13px;   
+    padding-left: 12px;   
 `; 
  
 export const Input = styled.TextInput` 
@@ -41,7 +41,7 @@ export const ButtonForm = styled.View`
     height: auto; 
     margin-top: 10px;  
     margin-bottom: 10px;  
-    padding: 5px; 
+    padding: 35px; 
     background-color: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -49,13 +49,17 @@ export const ButtonForm = styled.View`
     justify-content: space-evenly;
 `; 
  
-export const ButtonEntrar = styled.Button` 
-    display: inline-block;
-    color: palevioletred;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid palevioletred;
-    border-radius: 3px;
-    display: block;
+export const ButtonEntrar = styled.TouchableOpacity` 
+    background-color: #974CF6;
+    border-radius: 30px;
+    align-itens: center;
+    justify-content: center;
+    height: 45px;
+    width: 250px;
+`;
+
+export const ButtonText = styled.Text` 
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
 `;

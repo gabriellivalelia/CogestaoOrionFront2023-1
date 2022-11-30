@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PageTitle, Form, FormContainer, InputTitulo, InputDescricao, ButtonForm, ButtonCancelar, ButtonConfirmar } from "./Styles";
+import { PageTitle, Form, FormContainer, InputTitulo, InputDescricao, ButtonForm, ButtonCancelar, ButtonConfirmar, ButtonText } from "./Styles";
 
 function CadastrarLembrete({ navigation }) {
 
@@ -26,16 +26,14 @@ function CadastrarLembrete({ navigation }) {
             </Form>
 
             <ButtonForm>
-                <ButtonCancelar
-                    title="Cancelar"
-                    color="#D4BEF1"
-                    onPress={() => navigation.navigate('Home')}
-                />
-                <ButtonConfirmar
-                    title="Confirmar"
-                    color="#974CF6"
-                    onPress={() => navigation.navigate('Home')}
-                />
+                <ButtonCancelar onPress={() => navigation.navigate('Home')}>
+                    <ButtonText>Cancelar</ButtonText>
+                </ButtonCancelar>
+
+                <ButtonConfirmar onPress={() => navigation.navigate('Home')}>
+                    <ButtonText>Confirmar</ButtonText>
+                </ButtonConfirmar>
+
             </ButtonForm>
 
         </FormContainer>

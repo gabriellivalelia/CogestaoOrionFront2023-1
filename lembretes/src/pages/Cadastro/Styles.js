@@ -23,7 +23,7 @@ export const FormLabel = styled.Text`
     color: #510F71; 
     font-size: 18px; 
     font-weight: bold; 
-    padding-left: 13px;     
+    padding-left: 12px;     
 `; 
  
 export const Input = styled.TextInput` 
@@ -46,28 +46,31 @@ export const ButtonForm = styled.View`
     display: flex;
     flex-direction: row;
     align-itens: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 `; 
  
-export const ButtonCancelar = styled.Button` 
-    font-size: 15px; 
-    align-items: center; 
-    justify-content: center; 
-    width: 90%; 
+export const ButtonCancelar = styled.TouchableOpacity` 
     background-color: #D4BEF1; 
-    padding-top: 14px; 
-    padding-bottom: 14px; 
-    margin: 12px; 
-    marginTop: 30px; 
+    border-radius: 30px;
+    align-itens: center;
+    justify-content: center;
+    height: 45px;
+    width: 140px;
+    margin-top: 10px;
 `; 
  
-export const ButtonConfirmar = styled.Button` 
-    font-size: 15px; 
-    align-items: center; 
-    justify-content: center; 
-    width: 90%; 
-    background-color: #974CF6; 
-    padding-top: 14px; 
-    padding-bottom: 14px; 
-    margin: 12px; 
+export const ButtonConfirmar = styled.TouchableOpacity` 
+    background-color: #974CF6;
+    border-radius: 30px;
+    align-itens: center;
+    justify-content: center;
+    height: 45px;
+    width: 140px;
+    margin-top: 10px;
 `; 
+
+export const ButtonText = styled.Text` 
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+`;

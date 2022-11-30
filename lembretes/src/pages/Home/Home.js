@@ -1,13 +1,13 @@
 import React from 'react'
-import { Form, FormContainer, MainTitle, Subtitle, FormTasks, Task, TaskDescription, ButtonForm, ButtonExcluir, ButtonEditar, ButtonAdicionarLembrete } from "./Styles";
+import { Form, FormContainer, MainTitle, Subtitle, FormTasks, Task, TaskDescription, ButtonForm, ButtonExcluir, ButtonEditar, ButtonAdicionarLembrete, ButtonText } from "./Styles";
 
 function Home({ route, navigation }) {
 
     return (
         <FormContainer>
 
-                <MainTitle>Olá, {route.params?.nome}</MainTitle>
-                <Subtitle>Aqui estão seus lembretes registrados:</Subtitle>
+            <MainTitle>Olá, {route.params?.nome}</MainTitle>
+            <Subtitle>Aqui estão seus lembretes registrados:</Subtitle>
 
 
             <Form>
@@ -17,15 +17,14 @@ function Home({ route, navigation }) {
                 </FormTasks>
 
                 <ButtonForm>
-                    <ButtonExcluir
-                        title="Excluir"
-                        color="#D4BEF1"
-                    />
-                    <ButtonEditar
-                        title="Editar"
-                        color="#974CF6"
-                        onPress={() => navigation.navigate('EditarLembrete')}
-                    />
+                    <ButtonExcluir>
+                        <ButtonText>Excluir</ButtonText>
+                    </ButtonExcluir>
+
+                    <ButtonEditar onPress={() => navigation.navigate('EditarLembrete')}>
+                        <ButtonText>Editar</ButtonText>
+                    </ButtonEditar>
+
                 </ButtonForm>
 
             </Form>
@@ -37,24 +36,21 @@ function Home({ route, navigation }) {
                 </FormTasks>
 
                 <ButtonForm>
-                    <ButtonExcluir
-                        title="Excluir"
-                        color="#D4BEF1"
-                    />
-                    <ButtonEditar
-                        title="Editar"
-                        color="#974CF6"
-                        onPress={() => navigation.navigate('EditarLembrete')}
-                    />
+                    <ButtonExcluir>
+                        <ButtonText>Excluir</ButtonText>
+                    </ButtonExcluir>
+
+                    <ButtonEditar onPress={() => navigation.navigate('EditarLembrete')}>
+                        <ButtonText>Editar</ButtonText>
+                    </ButtonEditar>
                 </ButtonForm>
 
             </Form>
 
-            <ButtonAdicionarLembrete
-                title="Adicionar Lembrete"
-                color="#974CF6"
-                onPress={() => navigation.navigate('CadastrarLembrete')}
-            />
+            <ButtonAdicionarLembrete onPress={() => navigation.navigate('CadastrarLembrete')}>
+                <ButtonText>Adicionar Lembrete</ButtonText>
+            </ButtonAdicionarLembrete>
+
         </FormContainer>
     );
 }
