@@ -7,7 +7,7 @@ const number = 10;
 
 
 
-export default function Login(){
+export default function Login({navigation}){
     return(
         <View>
             <Image style={styles.logo} source={require('../Images/logo.png')} />
