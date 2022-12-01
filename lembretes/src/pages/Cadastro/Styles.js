@@ -18,6 +18,11 @@ export const Form = styled.View`
     height: auto;  
     padding: 30px; 
 `; 
+
+export const FormInput = styled.View` 
+    display: flex;
+    flex-direction: row;
+`; 
  
 export const FormLabel = styled.Text` 
     color: #510F71; 

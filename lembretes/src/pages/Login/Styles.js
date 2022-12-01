@@ -25,6 +25,11 @@ export const FormLabel = styled.Text`
     font-weight: bold;   
     padding-left: 12px;   
 `; 
+
+export const FormInput = styled.View` 
+    display: flex;
+    flex-direction: row;
+`; 
  
 export const Input = styled.TextInput` 
     width: 90%; 

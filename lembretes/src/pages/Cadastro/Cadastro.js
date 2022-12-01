@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 import Title from "../../components/Title";
-import { LogoImage, Form, FormContainer, FormLabel, Input, ButtonForm, ButtonCancelar, ButtonConfirmar, ButtonText } from "./Styles";
+import { LogoImage, Form, FormContainer, FormLabel, FormInput, Input, ButtonForm, ButtonCancelar, ButtonConfirmar, ButtonText } from "./Styles";
+
+import Icon from 'react-native-vector-icons/AntDesign';
 
 function Cadastro({ navigation }) {
 
@@ -13,20 +15,27 @@ function Cadastro({ navigation }) {
             <LogoImage source={require("../../assets/logo.png")} />
             <Title />
             <Form>
-
                 <FormLabel>Nome Completo</FormLabel>
-                <Input
-                    onChangeText={setNome}
-                    value={nome}
-                    placeholder="Digite seu nome completo"
-                />
+                <FormInput>
+                    <Input
+                        onChangeText={setNome}
+                        value={nome}
+                        placeholder="Digite seu nome completo"
+                    />
+                    <Icon name="idcard" size={25} color={"#510F71"} />
+                </FormInput>
+
 
                 <FormLabel>E-MAIL</FormLabel>
-                <Input
-                    onChangeText={setEmail}
-                    value={email}
-                    placeholder="Digite seu endereço de e-mail"
-                />
+                <FormInput>
+                    <Input
+                        onChangeText={setEmail}
+                        value={email}
+                        placeholder="Digite seu endereço de e-mail"
+                    />
+                    <Icon name="mail" size={25} color={"#510F71"} />
+                </FormInput>
+
 
                 <ButtonForm>
                     <ButtonCancelar>
