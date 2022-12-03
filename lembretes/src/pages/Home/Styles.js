@@ -10,8 +10,23 @@ export const Title = styled.Text`
     font-size: 30px;
     line-height: 36px;
 
-    color: #510F71;
+
 `;
+export const SubTitle = styled.Text`
+    align-self: center;
+    padding-top: 10%;
+
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 100;
+
+    justify-content: flex-start;
+
+
+`;
+
+
 export const Logo = styled.Image`
     top: 10%;
     align-self: center;

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { View,Text, Image,StyleSheet,Dimensions,TextInput,Button,Alert, TouchableOpacity } from "react-native";
-import { Botoes, BotoesTexto, EntradaEmail, Logo, Title } from "./Styles";
+import { View,Text, Image,StyleSheet,Dimensions,TextInput,Button,Alert, TouchableOpacity} from "react-native";
+import { Botoes, BotoesTexto, EntradaEmail, Logo, SubTitle, Title } from "./Styles";
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -10,19 +10,12 @@ const number = "";
 
 export default function Home({navigation}){
     const [email, setEmail, nome, setNome] = useState(null)
-    
+
     return(
         <View>
-            <Logo source={require("../Images/logo.png")}/>
-            <Title>LembraRápido</Title>
-            <EntradaEmail placeholder="Digite seu nome completo" value={nome} ></EntradaEmail>
-            <EntradaEmail placeholder="Digite seu endereço de e-mail" value={email} ></EntradaEmail>
-            <Botoes>
-                <BotoesTexto>Confirmar</BotoesTexto>
-            </Botoes>
-            <Botoes onPress={() => navigation.navigate('Login')}>
-                <BotoesTexto>Cancelar</BotoesTexto>
-            </Botoes>
+            <Title>Olá Usuario</Title> 
+            <SubTitle>Aqui estão os seus lembretes registrados:</SubTitle>
+            
         </View>
     );
 }
