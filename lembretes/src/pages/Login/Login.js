@@ -1,11 +1,6 @@
-import Login from "./Login";
-export default Login;
-
-/*
 import React, {useState} from "react";
 import { View,Text, Image,StyleSheet,Dimensions,TextInput,Button,Alert, TouchableOpacity } from "react-native";
-
-
+import { Logo, Title } from "./Styles";
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -18,8 +13,16 @@ export default function Login({navigation}){
 
     return(
         <View>
+           
+            <Title>LembraRápido</Title>
+            <Logo source={require("../Images/logo.png")}/>
+        </View>
+    );
+}
+/*
+<View>
             <Image style={styles.logo} source={require('../Images/logo.png')} />
-            <Text style={styles.title}>LembraRápido</Text>
+            <Title>LembraRápido</Title>
             
             <TextInput style={styles.inputs} value={email} placeholder="EMAIL" keyboardType="email-address" onChangeText={setEmail}/>
             
@@ -35,55 +38,4 @@ export default function Login({navigation}){
                 <Text style={styles.botaotexto}>home</Text>    
             </TouchableOpacity>
             
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    title:{
-        paddingTop: height*0.08,
-        fontWeight: "bold",
-        fontSize:25,
-        alignSelf: "center"
-        
-    },
-    logo:{
-        alignSelf: 'flex-start',
-        top: height*0.10,
-        alignSelf: "center"
-    },
-    inputs:{
-        alignSelf: "center",
-        top: height*0.013,
-        width: width*0.6,
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-    },
-    botaoLogin: {
-        alignSelf: "center",
-        backgroundColor: "#DDDDDD",
-        padding: 10,
-        paddingVertical:15,
-        elevation: 5,
-        borderRadius: 100,
-        top: 25,
-        width: width*0.5
-      },
-    botaoCadastro: {
-        alignSelf: "center",
-        backgroundColor: "#DDDDDD",
-        padding: 10,
-        paddingVertical:15,
-        elevation: 5,
-        borderRadius: 100,
-        top: 40,
-        width: width*0.5
-      },
-    botaotexto:{
-        alignSelf:'center'
-    }  
-    
-    
-})*/
+        </View>*/
