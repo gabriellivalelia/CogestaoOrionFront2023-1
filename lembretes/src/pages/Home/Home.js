@@ -8,24 +8,20 @@ const number = "";
 
 
 
-export default function Login({navigation}){
-    const [email, setEmail] = useState(null)
-
+export default function Home({navigation}){
+    const [email, setEmail, nome, setNome] = useState(null)
+    
     return(
         <View>
             <Logo source={require("../Images/logo.png")}/>
             <Title>LembraRápido</Title>
+            <EntradaEmail placeholder="Digite seu nome completo" value={nome} ></EntradaEmail>
             <EntradaEmail placeholder="Digite seu endereço de e-mail" value={email} ></EntradaEmail>
             <Botoes>
-                <BotoesTexto>LOGIN</BotoesTexto>
+                <BotoesTexto>Confirmar</BotoesTexto>
             </Botoes>
-            
-            <Botoes onPress={() => navigation.navigate('Cadastro')}>
-                <BotoesTexto>CADASTRAR</BotoesTexto>
-            </Botoes>
-            
-            <Botoes onPress={() => navigation.navigate('Home')}>
-                <BotoesTexto>home</BotoesTexto>
+            <Botoes onPress={() => navigation.navigate('Login')}>
+                <BotoesTexto>Cancelar</BotoesTexto>
             </Botoes>
         </View>
     );

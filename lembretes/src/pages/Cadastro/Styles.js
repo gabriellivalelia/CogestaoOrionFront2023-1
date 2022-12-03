@@ -22,13 +22,15 @@ export const EntradaEmail = styled.TextInput`
     align-self: center;
     width: 65%;
     top: 10%;
+    margin-bottom: 3%;
+
 `;
 
 export const Botoes = styled.TouchableOpacity`
     align-self: center;
     width: 65%;
     top: 18%;
-    height: 7%;
+    height: 8%;
     background-color: "#DDDDDD";
     margin-bottom: 5%;
     background-color: purple;
@@ -37,6 +39,6 @@ export const Botoes = styled.TouchableOpacity`
 
 export const BotoesTexto = styled.Text`
     align-self: center;
-    line-height: 25px;
+    line-height: 30px;
     
 `;
