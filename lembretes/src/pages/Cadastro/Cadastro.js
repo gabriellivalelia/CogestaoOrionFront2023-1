@@ -1,14 +1,51 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom"
+import api from "../../services/api"
 
 import Title from "../../components/Title";
-import { LogoImage, Form, FormContainer, FormLabel, FormInput, Input, ButtonForm, ButtonCancelar, ButtonConfirmar, ButtonText } from "./Styles";
+import { 
+    LogoImage, 
+    Form, 
+    FormContainer, 
+    FormLabel, 
+    FormInput, 
+    Input, 
+    ButtonForm, 
+    ButtonCancelar, 
+    ButtonConfirmar, 
+    ButtonText 
+} from "./Styles";
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
-function Cadastro({ navigation }) {
+function Cadastro() {
 
-    const [nome, setNome] = useState(null)
-    const [email, setEmail] = useState(null)
+    const [pessoa, setPessoa] = useState({})
+
+    function handleInputChange(e) {
+        const key = e.target.nome;
+        const newPessoa = { ...pessoa };
+        newPessoa[key] = e.target.value;
+
+        setPessoa(newPessoa);
+    }
+
+    async function botaoProsseguir(e) {
+        e.preventDefault();
+        try {
+            console.log(pessoa);
+            const response = await api.post('/users', user);
+            setPessoa(response.data);
+            console.log(response);
+            alert("Usuário cadastrado com sucesso");
+            history.push("Home");
+        } catch (error) {
+            console.warn(error);
+            alert(error.response?.status);
+        }
+      }
+
+      const history = useHistory();
 
     return (
         <FormContainer>
@@ -18,8 +55,8 @@ function Cadastro({ navigation }) {
                 <FormLabel>Nome Completo</FormLabel>
                 <FormInput>
                     <Input
-                        onChangeText={setNome}
-                        value={nome}
+                        onChange={handleInputChange}
+                        value={pessoa.nome}
                         placeholder="Digite seu nome completo"
                     />
                     <Icon name="idcard" size={25} color={"#510F71"} />
@@ -29,8 +66,8 @@ function Cadastro({ navigation }) {
                 <FormLabel>E-MAIL</FormLabel>
                 <FormInput>
                     <Input
-                        onChangeText={setEmail}
-                        value={email}
+                        onChange={handleInputChange}
+                        value={pessoa.email}
                         placeholder="Digite seu endereço de e-mail"
                     />
                     <Icon name="mail" size={25} color={"#510F71"} />
@@ -42,7 +79,7 @@ function Cadastro({ navigation }) {
                         <ButtonText>Cancelar</ButtonText>
                     </ButtonCancelar>
 
-                    <ButtonConfirmar onPress={() => navigation.navigate('Login')}>
+                    <ButtonConfirmar type="submit" onClick={botaoProsseguir}>
                         <ButtonText>Confirmar</ButtonText>
                     </ButtonConfirmar>
 
