@@ -18,9 +18,14 @@ import {
 
 import Icon from 'react-native-vector-icons/AntDesign';
 
+const history = useHistory();
+
 function Cadastro() {
 
-    const [pessoa, setPessoa] = useState({})
+    const [pessoa, setPessoa] = useState({
+        nome: "",
+        email: "",
+    });
 
     function handleInputChange(e) {
         const key = e.target.nome;
@@ -29,23 +34,6 @@ function Cadastro() {
 
         setPessoa(newPessoa);
     }
-
-    async function botaoProsseguir(e) {
-        e.preventDefault();
-        try {
-            console.log(pessoa);
-            const response = await api.post('/users', user);
-            setPessoa(response.data);
-            console.log(response);
-            alert("Usuário cadastrado com sucesso");
-            history.push("Home");
-        } catch (error) {
-            console.warn(error);
-            alert(error.response?.status);
-        }
-      }
-
-      const history = useHistory();
 
     return (
         <FormContainer>
