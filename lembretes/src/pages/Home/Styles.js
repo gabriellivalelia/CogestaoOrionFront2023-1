@@ -43,11 +43,11 @@ export const EntradaEmail = styled.TextInput`
 
 export const Botoes = styled.TouchableOpacity`
     align-self: center;
-    width: 65%;
-    top: 18%;
-    height: 8%;
+    margin: 2%;
+    width: 20%;
+    height: auto;
     background-color: "#DDDDDD";
-    margin-bottom: 5%;
+    margin-top: 5%;
     background-color: purple;
     border-radius: 10px;
 `;
@@ -56,4 +56,44 @@ export const BotoesTexto = styled.Text`
     align-self: center;
     line-height: 30px;
     
+`;
+
+export const LembretesCaixa = styled.View`
+    align-self: center;
+    border: 1px;
+    height: auto;
+    width: 70%;
+    margin-top: 5%;
+
+`;
+
+export const TextoTituloLembrete = styled.Text`
+    align-self: center;
+    margin-top: 2%;
+    font-size: 20px;
+
+`;
+
+export const TextoSubTituloLembrete = styled.Text`
+    align-self: center;
+    margin-top: 2%;
+    font-size: 12px;
+
+`;
+
+export const LembretesViewButtons = styled.View `
+    flex-direction: row;
+    align-self: center;
+    margin-bottom: 1%;
+`;
+
+export const ButtonCreate = styled.TouchableOpacity`
+    align-self: flex-end;
+    margin-right: 10%;
+    width: 35%;
+    height: auto;
+    background-color: "#DDDDDD";
+    margin-top: 12%;
+    background-color: purple;
+    border-radius: 10px;
 `;

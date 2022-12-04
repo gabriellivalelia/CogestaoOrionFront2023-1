@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { View,Text, Image,StyleSheet,Dimensions,TextInput,Button,Alert, TouchableOpacity} from "react-native";
-import { Botoes, BotoesTexto, EntradaEmail, Logo, SubTitle, Title } from "./Styles";
+import { Botoes, BotoesTexto, ButtonCreate, EntradaEmail, LembretesCaixa, LembretesViewButtons, Logo, SubTitle, TextoSubTituloLembrete, TextoTituloLembrete, Title } from "./Styles";
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -15,7 +15,45 @@ export default function Home({navigation}){
         <View>
             <Title>Olá Usuario</Title> 
             <SubTitle>Aqui estão os seus lembretes registrados:</SubTitle>
-            
+            <LembretesCaixa>
+                <TextoTituloLembrete>Teste</TextoTituloLembrete>
+                <TextoSubTituloLembrete>Teste</TextoSubTituloLembrete>
+                <LembretesViewButtons>
+                    <Botoes>
+                        <BotoesTexto>Excluir</BotoesTexto>
+                    </Botoes>
+                    <Botoes>
+                        <BotoesTexto>Editar</BotoesTexto>
+                    </Botoes>    
+                </LembretesViewButtons>
+            </LembretesCaixa>
+            <LembretesCaixa>
+                <TextoTituloLembrete>Teste</TextoTituloLembrete>
+                <TextoSubTituloLembrete>Teste</TextoSubTituloLembrete>
+                <LembretesViewButtons>
+                    <Botoes>
+                        <BotoesTexto>Excluir</BotoesTexto>
+                    </Botoes>
+                    <Botoes>
+                        <BotoesTexto>Editar</BotoesTexto>
+                    </Botoes>    
+                </LembretesViewButtons>
+            </LembretesCaixa>
+            <LembretesCaixa>
+                <TextoTituloLembrete>Teste</TextoTituloLembrete>
+                <TextoSubTituloLembrete>Teste</TextoSubTituloLembrete>
+                <LembretesViewButtons>
+                    <Botoes>
+                        <BotoesTexto>Excluir</BotoesTexto>
+                    </Botoes>
+                    <Botoes>
+                        <BotoesTexto>Editar</BotoesTexto>
+                    </Botoes>    
+                </LembretesViewButtons>
+            </LembretesCaixa>
+            <ButtonCreate onPress={() => navigation.navigate('CadastrarLembrete')}>
+                <BotoesTexto>Adicionar Lembrete</BotoesTexto>
+            </ButtonCreate>
         </View>
     );
 }
